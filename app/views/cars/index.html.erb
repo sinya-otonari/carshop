@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>自動車一覧</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>車名</th>
+      <th>車種</th>
+      <th>年式</th>
+      <th>価格</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cars.each do |car| %>
+      <tr>
+        <td><%= car.name %></td>
+        <td><%= car.model %></td>
+        <td><%= car.year %></td>
+        <td><%= car.price %></td>
+        <td><%= link_to '詳細', car %></td>
+        <td><%= link_to '編集', edit_car_path(car) %></td>
+        <td><%= link_to '削除', car, method: :delete, data: { confirm: '削除しますか' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to '新規登録', new_car_path %>

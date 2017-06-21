@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>日付:</strong>
+  <%= @sale.date %>
+</p>
+
+<p>
+  <strong>社員名:</strong>
+  <%= @sale.employee %>
+</p>
+
+<p>
+  <strong>車名:</strong>
+  <%= @sale.car %>
+</p>
+
+<%= link_to '編集', edit_sale_path(@sale) %> |
+<%= link_to '戻る', sales_path %>

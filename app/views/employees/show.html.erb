@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>氏名:</strong>
+  <%= @employee.name %>
+</p>
+
+<p>
+  <strong>入社年:</strong>
+  <%= @employee.year %>
+</p>
+
+<%= link_to '編集', edit_employee_path(@employee) %> |
+<%= link_to '戻る', employees_path %>

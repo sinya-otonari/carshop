@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>車名:</strong>
+  <%= @car.name %>
+</p>
+
+<p>
+  <strong>車種:</strong>
+  <%= @car.model %>
+</p>
+
+<p>
+  <strong>年式:</strong>
+  <%= @car.year %>
+</p>
+
+<p>
+  <strong>価格:</strong>
+  <%= @car.price %>
+</p>
+
+<%= link_to '編集', edit_car_path(@car) %> |
+<%= link_to '戻る', cars_path %>
