@@ -7,12 +7,12 @@
 
 <p>
   <strong>社員名:</strong>
-  <%= @sale.employee %>
+  <%= @sale.employee.name %>
 </p>
 
 <p>
   <strong>車名:</strong>
-  <%= @sale.car %>
+  <%= @sale.car.name %>
 </p>
 
 <%= link_to '編集', edit_sale_path(@sale) %> |

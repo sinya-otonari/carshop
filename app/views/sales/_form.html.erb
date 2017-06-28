@@ -18,12 +18,12 @@
 
   <div class="field">
     <%= f.label :社員名 %>
-    <%= f.text_field :employee_id %>
+    <%= f.collection_select(:employee_id, Employee.all, :id, :name) %>
   </div>
 
   <div class="field">
     <%= f.label :車名 %>
-    <%= f.text_field :car_id %>
+    <%= f.collection_select(:car_id, Car.all, :id, :name) %>
   </div>
 
   <div class="actions">

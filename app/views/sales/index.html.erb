@@ -16,8 +16,8 @@
     <% @sales.each do |sale| %>
       <tr>
         <td><%= sale.date %></td>
-        <td><%= sale.employee %></td>
-        <td><%= sale.car %></td>
+        <td><%= sale.employee.name %></td>
+        <td><%= sale.car.name %></td>
         <td><%= link_to '詳細', sale %></td>
         <td><%= link_to '編集', edit_sale_path(sale) %></td>
         <td><%= link_to '削除', sale, method: :delete, data: { confirm: '削除しますか?' } %></td>
@@ -28,4 +28,6 @@
 
 <br>
 
-<%= link_to '新規登録', new_sale_path %>
+<%= link_to '新規登録', new_sale_path %> |
+<%= link_to '社員マスター', controller: :employees, action: :index %> |
+<%= link_to '自動車マスター', controller: :cars, action: :index %>
